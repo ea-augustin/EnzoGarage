@@ -1,0 +1,28 @@
+<p>brand works!</p>
+<div class="row d-flex">
+  <div class="col-6">
+    <table datatable class="table table-striped ">
+      <thead>
+      <tr>
+        <th>
+          Nom
+        </th>
+        <th>
+          Logo
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let brand of arrayBrands">
+        <td>
+          {{brand.name}}
+
+        </td>
+        <td>
+          {{brand.logo}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
