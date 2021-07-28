@@ -15,6 +15,8 @@ import { GaragesComponent } from './components/garages/garages.component';
 import { ModelsComponent } from './components/models/models.component';
 import { MileageComponent } from './components/mileage/mileage.component';
 import { PricesComponent } from './components/prices/prices.component';
+import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { PricesComponent } from './components/prices/prices.component';
     ModelsComponent,
     MileageComponent,
     PricesComponent,
+    HomeComponent,
 
   ],
   imports: [
@@ -36,7 +39,8 @@ import { PricesComponent } from './components/prices/prices.component';
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    DataTablesModule
+    DataTablesModule,
+    BrowserAnimationsModule
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
