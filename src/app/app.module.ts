@@ -17,8 +17,10 @@ import { MileageComponent } from './components/mileage/mileage.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrandDetailsComponent } from './components/brand-details/brand-details.component';
 import { AdvertisementDetailsComponent } from './components/advertisement-details/advertisement-details.component';
+import { AddAdvertismentComponent } from './components/add-advertisment/add-advertisment.component';
+import { AddGarageComponent } from './components/add-garage/add-garage.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -34,8 +36,9 @@ import { AdvertisementDetailsComponent } from './components/advertisement-detail
     MileageComponent,
     PricesComponent,
     HomeComponent,
-    BrandDetailsComponent,
     AdvertisementDetailsComponent,
+    AddAdvertismentComponent,
+    AddGarageComponent,
 
   ],
   imports: [
@@ -44,7 +47,8 @@ import { AdvertisementDetailsComponent } from './components/advertisement-detail
     HttpClientModule,
     FontAwesomeModule,
     DataTablesModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
