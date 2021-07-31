@@ -17,6 +17,8 @@ import { MileageComponent } from './components/mileage/mileage.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrandDetailsComponent } from './components/brand-details/brand-details.component';
+import { AdvertisementDetailsComponent } from './components/advertisement-details/advertisement-details.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MileageComponent,
     PricesComponent,
     HomeComponent,
+    BrandDetailsComponent,
+    AdvertisementDetailsComponent,
 
   ],
   imports: [
