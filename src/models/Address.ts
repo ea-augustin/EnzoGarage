@@ -8,7 +8,7 @@ export class Address {
 
 
   constructor(id: number, city_id: City, Street_num: string, postal_code: string) {
-    this._id = id;
+    this._id = id
     this._city_id = city_id;
     this._Street_num = Street_num;
     this._postal_code = postal_code;
