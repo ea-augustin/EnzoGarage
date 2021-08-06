@@ -31,6 +31,7 @@
     "jquery": "^3.4.1",
     "ng": "*",
     "ngx-bootstrap": "^7.0.0",
+    "ngx-toastr": "^14.0.0",
     "rxjs": "~6.6.0",
     "service": "^0.1.4",
     "tslib": "^2.2.0",

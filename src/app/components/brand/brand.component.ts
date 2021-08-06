@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BrandService} from "../../../services/brand.service";
-import {Brand} from "../../../models/Brand";
+import {BrandsService} from "../../services/brands.service";
+import {Brand} from "../../models/Brand";
 
 @Component({
   selector: 'app-brand',
@@ -11,12 +11,12 @@ export class BrandComponent implements OnInit {
 
   arrayBrands: Array<Brand>
 
-  constructor(public brandService: BrandService) {
+  constructor(public brandService: BrandsService) {
     this.arrayBrands = new Array<Brand>()
   }
 
   ngOnInit(): void {
-    this.arrayBrands = this.brandService.getArrayBrands();
+
 
   }
 

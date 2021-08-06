@@ -5,19 +5,19 @@ import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/internal/operators';
 import {Brand} from "../models/Brand";
 
+const API_URL = 'http://localhost:8000/api/';
+
 @Injectable({
   providedIn: 'root'
 })
 export class GarageApiHttpService {
 
-  private urlCars = 'http://localhost:8000/cars';
-  private urlBrands = 'http://localhost:8000/brands';
 
   constructor(private httpClient: HttpClient) {
   }
 
   getBrands(): Observable<Brand[]> {
-    return this.httpClient.get<Brand[]>(this.urlBrands).pipe(retry(1), catchError(this.handleError));
+    return this.httpClient.get<Brand[]>(API_URL + 'brands').pipe(retry(1), catchError(this.handleError));
   }
 
   // @ts-ignore

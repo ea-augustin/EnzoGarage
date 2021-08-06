@@ -6,11 +6,13 @@ import {AdvertisementsComponent} from "./components/advertisements/advertisement
 import {AdvertisementDetailsComponent} from "./components/advertisement-details/advertisement-details.component";
 import {AddAdvertismentComponent} from "./components/add-advertisment/add-advertisment.component";
 import {AddGarageComponent} from "./components/add-garage/add-garage.component";
+import {LoginComponent} from "./components/login/login.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component:HomeComponent},
-  //todo { path: 'login', component:LoginComponent},
+  { path: 'login', component:LoginComponent},
   { path: 'brands', component:BrandComponent},
   { path: 'advertisements', component:AdvertisementsComponent},
   { path: 'advertisements/add', component:AddAdvertismentComponent},

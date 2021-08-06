@@ -21,6 +21,10 @@ import { AdvertisementDetailsComponent } from './components/advertisement-detail
 import { AddAdvertismentComponent } from './components/add-advertisment/add-advertisment.component';
 import { AddGarageComponent } from './components/add-garage/add-garage.component';
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import {authInterceptorProviders, AuthInterceptorService} from "./services/authentication/auth-interceptor.service";
+
 
 
 @NgModule({
@@ -39,6 +43,8 @@ import {FormsModule} from "@angular/forms";
     AdvertisementDetailsComponent,
     AddAdvertismentComponent,
     AddGarageComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [
@@ -50,7 +56,7 @@ import {FormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     FormsModule,
   ],
-  providers: [AppComponent],
+  providers: [AppComponent,authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
