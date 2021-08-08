@@ -24,8 +24,11 @@ import {FormsModule} from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {authInterceptorProviders, AuthInterceptorService} from "./services/authentication/auth-interceptor.service";
+import {JwtModule} from "@auth0/angular-jwt";
 
-
+export function tokenGetter() {
+  return sessionStorage.getItem("auth_token");
+}
 
 @NgModule({
   declarations: [
@@ -55,6 +58,11 @@ import {authInterceptorProviders, AuthInterceptorService} from "./services/authe
     DataTablesModule,
     BrowserAnimationsModule,
     FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+      },
+    }),
   ],
   providers: [AppComponent,authInterceptorProviders],
   bootstrap: [AppComponent]

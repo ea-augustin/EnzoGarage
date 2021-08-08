@@ -7,11 +7,12 @@ import {AdvertisementDetailsComponent} from "./components/advertisement-details/
 import {AddAdvertismentComponent} from "./components/add-advertisment/add-advertisment.component";
 import {AddGarageComponent} from "./components/add-garage/add-garage.component";
 import {LoginComponent} from "./components/login/login.component";
+import {AuthGuard} from "./guards/auth.guard";
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component:HomeComponent},
+  { path: 'home', component:HomeComponent, canActivate: [AuthGuard]},
   { path: 'login', component:LoginComponent},
   { path: 'brands', component:BrandComponent},
   { path: 'advertisements', component:AdvertisementsComponent},
