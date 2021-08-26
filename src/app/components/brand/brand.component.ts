@@ -9,15 +9,16 @@ import {Brand} from "../../models/Brand";
 })
 export class BrandComponent implements OnInit {
 
-  arrayBrands: Array<Brand>
+  brands: Brand[] | undefined;
 
   constructor(public brandService: BrandsService) {
-    this.arrayBrands = new Array<Brand>()
+
   }
 
   ngOnInit(): void {
-
-
+    this.brandService.getAllBrands().subscribe(data => {
+      this.brands = data;
+    })
   }
 
 }

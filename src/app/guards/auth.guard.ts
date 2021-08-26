@@ -13,12 +13,13 @@ export class AuthGuard implements CanActivate {
   // if user is connected he will be redirected to home page
 
   canActivate(
-    route: ActivatedRouteSnapshot,
+    next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (!this.auth.isConnected()) {
       this.router.navigate(['/login']);
-      return  false;
-    }else {
+      return false;
+    } else {
+      this.router.navigate(['/home']);
       return true;
     }
   }
