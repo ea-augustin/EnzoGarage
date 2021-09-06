@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Brand} from "../models/Brand";
 import {Observable, throwError} from "rxjs";
 import {catchError, retry} from 'rxjs/internal/operators';
+import {ApiPlatformData} from "../models/ApiPlatformData";
 
 
 @Injectable({
@@ -21,8 +22,8 @@ export class BrandsService {
   }
 
 
-  getAllBrands(): Observable<Brand[]> {
-    return this.httpClient.get<Brand[]>(this.apiUrl, this.httpOptions).pipe(retry(1), catchError(this.handleError));
+  getAllBrands(): Observable<ApiPlatformData> {
+    return this.httpClient.get<ApiPlatformData>(this.apiUrl, this.httpOptions).pipe(retry(1), catchError(this.handleError));
   }
 
 

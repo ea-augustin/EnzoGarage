@@ -17,7 +17,8 @@ export class BrandComponent implements OnInit {
 
   ngOnInit(): void {
     this.brandService.getAllBrands().subscribe(data => {
-      this.brands = data;
+      this.brands = data['hydra:member'];
+      console.log(this.brands);
     })
   }
 

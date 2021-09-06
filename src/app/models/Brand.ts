@@ -1,28 +1,21 @@
 export class Brand {
 
-  private _name: string
-  private _logo: string
+  private _nameBrd: string = '';
+  private _id: string = '';
 
-
-  get name(): string {
-    return this._name;
+  get nameBrd(): string {
+    return this._nameBrd;
   }
 
-  set name(value: string) {
-    this._name = value;
+  set nameBrd(value: string) {
+    this._nameBrd = value;
   }
 
-  get logo(): string {
-    return this._logo;
+  get id(): string {
+    return this._id;
   }
 
-  set logo(value: string) {
-    this._logo = value;
-  }
-
-
-  constructor(name: string, logo: string) {
-    this._name = name;
-    this._logo = logo;
+  set id(value: string) {
+    this._id = value;
   }
 }
