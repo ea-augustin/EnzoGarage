@@ -7,23 +7,23 @@ export class Advertisement {
   private _brand_id: Brand;
   private _fueltype_id: Fueltype;
   private _garage_id: Garage;
-  private _title: string;
-  private _price: number;
-  private _description: string;
+  private _title_adv: string;
+  private _price_adv: number;
+  private _description_adv: string;
   private _date: Date;
-  private _mileage: number;
+  private _mileage_adv: number;
 
 
-  constructor(id: number, brand_id: Brand, fueltype_id: Fueltype, garage_id: Garage, title: string, price: number, description: string, date: Date, mileage: number) {
+  constructor(id: number, brand_id: Brand, fueltype_id: Fueltype, garage_id: Garage, title_adv: string, price_adv: number, description_adv: string, date: Date, mileage_adv: number) {
     this._id = id;
     this._brand_id = brand_id;
     this._fueltype_id = fueltype_id;
     this._garage_id = garage_id;
-    this._title = title;
-    this._price = price;
-    this._description = description;
+    this._title_adv = title_adv;
+    this._price_adv = price_adv;
+    this._description_adv = description_adv;
     this._date = date;
-    this._mileage = mileage;
+    this._mileage_adv = mileage_adv;
   }
 
   get id(): number {
@@ -58,28 +58,28 @@ export class Advertisement {
     this._garage_id = value;
   }
 
-  get title(): string {
-    return this._title;
+  get title_adv(): string {
+    return this._title_adv;
   }
 
-  set title(value: string) {
-    this._title = value;
+  set title_adv(value: string) {
+    this._title_adv = value;
   }
 
-  get price(): number {
-    return this._price;
+  get price_adv(): number {
+    return this._price_adv;
   }
 
-  set price(value: number) {
-    this._price = value;
+  set price_adv(value: number) {
+    this._price_adv = value;
   }
 
-  get description(): string {
-    return this._description;
+  get description_adv(): string {
+    return this._description_adv;
   }
 
-  set description(value: string) {
-    this._description = value;
+  set description_adv(value: string) {
+    this._description_adv = value;
   }
 
   get date(): Date {
@@ -90,12 +90,12 @@ export class Advertisement {
     this._date = value;
   }
 
-  get mileage(): number {
-    return this._mileage;
+  get mileage_adv(): number {
+    return this._mileage_adv;
   }
 
-  set mileage(value: number) {
-    this._mileage = value;
+  set mileage_adv(value: number) {
+    this._mileage_adv = value;
   }
 
 

@@ -1,1 +1,40 @@
-<p>advertisements works!</p>
+<p>brand works!</p>
+<div class="row d-flex">
+  <div class="col-6">
+    <table datatable class="table table-striped ">
+      <thead>
+      <tr>
+        <th>
+          Nom
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Mileage
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let advertisement of advertisements">
+        <td>
+          {{advertisement.title_adv}}
+        </td>
+        <td>
+          {{advertisement.description_adv}}
+        </td>
+        <td>
+          {{advertisement.mileage_adv}}
+        </td>
+        <td>
+          {{advertisement.price_adv}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

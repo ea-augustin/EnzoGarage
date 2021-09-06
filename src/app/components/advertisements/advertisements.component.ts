@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AdvertisementService} from "../../services/advertisement.service";
+import {Advertisement} from "../../models/Advertisement";
 
 @Component({
   selector: 'app-advertisements',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertisementsComponent implements OnInit {
 
-  constructor() { }
+  advertisements: Advertisement[] | undefined;
+
+  constructor(public advertisementService:  AdvertisementService) { }
 
   ngOnInit(): void {
+
+    this.advertisementService.getAllAdvertisements().subscribe(data=>{
+      this.advertisements = data['hydra:member'];
+      console.log(this.advertisements);
+    })
   }
 
 }
