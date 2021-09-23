@@ -8,6 +8,7 @@ import {AddAdvertismentComponent} from "./components/add-advertisment/add-advert
 import {AddGarageComponent} from "./components/add-garage/add-garage.component";
 import {LoginComponent} from "./components/login/login.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {AlwaysAuthGuardService} from "./services/always-auth-guard.service";
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'home', component:HomeComponent},
   { path: 'login', component:LoginComponent},
   { path: 'brands', component:BrandComponent,canActivate: [AuthGuard]},
-  { path: 'advertisements', component:AdvertisementsComponent},
+  { path: 'advertisements', component:AdvertisementsComponent, canActivate: [AlwaysAuthGuardService]},
   { path: 'advertisements/add', component:AddAdvertismentComponent},
   { path: 'advertisements/:id', component:AdvertisementDetailsComponent},
   { path: 'garages/add', component:AddGarageComponent},

@@ -25,6 +25,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {authInterceptorProviders, AuthInterceptorService} from "./services/authentication/auth-interceptor.service";
 import {JwtModule} from "@auth0/angular-jwt";
+import {AlwaysAuthGuardService} from "./services/always-auth-guard.service";
+import { HeroComponent } from './components/hero/hero.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 export function tokenGetter() {
   return sessionStorage.getItem("auth_token");
@@ -48,6 +51,8 @@ export function tokenGetter() {
     AddGarageComponent,
     LoginComponent,
     RegisterComponent,
+    HeroComponent,
+    FilterComponent,
 
   ],
   imports: [
@@ -64,7 +69,8 @@ export function tokenGetter() {
       },
     }),
   ],
-  providers: [AppComponent,authInterceptorProviders],
+  providers: [AppComponent,authInterceptorProviders,
+    AlwaysAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

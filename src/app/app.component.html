@@ -1,15 +1,59 @@
-<header>
-<app-header></app-header>
-</header>
 
 <body>
-<router-outlet></router-outlet>
-</body>
-
-
+<header>
+  <app-header></app-header>
+</header>
+<section id="hero">
+  <app-hero></app-hero>
+</section>
+<section id="filter">
+  <app-filter></app-filter>
+  <router-outlet></router-outlet>
+</section>
+<section id="viewAllCars">
+  <div class="container">
+    <div class="row">
+     <div class="card1 col">
+       <div class="card" style="width: 18rem;">
+         <img src="..." class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">Card title</h5>
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+       </div>
+     </div>
+     <div class="card2 col">
+       <div class="card" style="width: 18rem;">
+         <img src="..." class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">Card title</h5>
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+       </div>
+     </div>
+     <div class="card3 col">
+       <div class="card" style="width: 18rem;">
+         <img src="..." class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">Card title</h5>
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+       </div>
+     </div>
+      </div>
+    </div>
+</section>
 <footer>
   <app-footer></app-footer>
 </footer>
+
+</body>
+
+
+
 
 
 
