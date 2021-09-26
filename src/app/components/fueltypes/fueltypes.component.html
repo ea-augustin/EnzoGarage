@@ -1,1 +1,25 @@
-<p>fueltypes works!</p>
+
+<div class="row d-flex">
+  <div class="col-6">
+    <table datatable class="table table-striped ">
+      <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+         Fuel Type
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let fuelType of fuelTypes">
+        <td>
+          {{fuelType.type_ful}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

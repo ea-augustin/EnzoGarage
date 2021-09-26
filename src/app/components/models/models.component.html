@@ -1,1 +1,22 @@
-<p>models works!</p>
+
+<div class="row d-flex">
+  <div class="col-6">
+    <table datatable class="table table-striped ">
+      <thead>
+      <tr>
+        <th>
+          Model
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let model of models">
+        <td>
+          {{model.name_mod}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

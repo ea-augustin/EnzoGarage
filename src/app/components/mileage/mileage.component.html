@@ -1,1 +1,25 @@
-<p>mileage works!</p>
+<div class="row d-flex">
+  <div class="col-6">
+    <table datatable class="table table-striped ">
+      <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+         Mileage
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let mileage of mileages">
+        <td>
+          {{mileage.mileage_adv}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

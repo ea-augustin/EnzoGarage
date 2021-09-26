@@ -9,6 +9,8 @@ import {AddGarageComponent} from "./components/add-garage/add-garage.component";
 import {LoginComponent} from "./components/login/login.component";
 import {AuthGuard} from "./guards/auth.guard";
 import {AlwaysAuthGuardService} from "./services/always-auth-guard.service";
+import {FueltypesComponent} from "./components/fueltypes/fueltypes.component";
+import {ModelsComponent} from "./components/models/models.component";
 
 
 const routes: Routes = [
@@ -20,6 +22,9 @@ const routes: Routes = [
   { path: 'advertisements/add', component:AddAdvertismentComponent},
   { path: 'advertisements/:id', component:AdvertisementDetailsComponent},
   { path: 'garages/add', component:AddGarageComponent},
+  { path: 'fueltypes', component: FueltypesComponent},
+  { path: 'mileage', component: AdvertisementsComponent},
+  { path: 'models', component: ModelsComponent},
 ];
 
 @NgModule({
